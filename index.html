@@ -25,7 +25,7 @@
 
 
   <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/vr.svg">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,28 +52,41 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
-            <div class="is-size-5 publication-authors">
-              <!-- Paper authors -->
-              <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+            <h1 class="title is-1 publication-title">GenHOI: Generalizing Text-driven 4D Human-Object
+              Interaction Synthesis for Unseen Objects</h1>
+              <div class="is-size-5 publication-authors">
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
-                  <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
-                  </span>
-                  </div>
-
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                  </div>
+                  <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Shujia Li</a><sup>1,2</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Haiyu Zhang</a><sup>2,3</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Xinyuan Chen</a><sup>2</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="FOURTH AUTHOR PERSONAL LINK" target="_blank">Yaohui Wang</a><sup>2*</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="FIFTH AUTHOR PERSONAL LINK" target="_blank">Yutong Ban</a><sup>1*</sup>
+                </span>
+              </div>
+              
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <sup>1</sup>Shanghai Jiao Tong University
+                  <sup>2</sup>Shanghai AI Lab
+                  <sup>3</sup>Beihang University<br>
+                  <!-- Conferance name and year -->
+                </span>
+                <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Corresponding author</small></span>
+              </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2506.15483" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -83,7 +96,7 @@
                     </span>
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -91,11 +104,11 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/etach-qs/GenHOI" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -106,7 +119,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2506.15483" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -123,22 +136,17 @@
 </section>
 
 
-<!-- Teaser video-->
+<!-- Teaser Image-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
+      <img src="static/images/teaser_new.png" alt="Teaser Image" style="width:100%; height:auto;">
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        GenHOI synthesizes interaction between human and unseen object conditioned on text.
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -148,7 +156,8 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            While diffusion models and large-scale motion datasets have advanced text-driven human motion synthesis, extending these advances to 4D human-object interaction (HOI) remains challenging, mainly due to the limited availability of large-scale 4D HOI datasets. In our study, we introduce GenHOI, a novel two-stage framework aimed at achieving two key objectives: 1) generalization to unseen objects and 2) the synthesis of high-fidelity 4D HOI sequences.
+In the initial stage of our framework, we employ an Object-AnchorNet to reconstruct sparse 3D HOI keyframes for unseen objects, learning solely from 3D HOI datasets, thereby mitigating the dependence on large-scale 4D HOI datasets. Subsequently, we introduce a Contact-Aware Diffusion Model (ContactDM) in the second stage to seamlessly interpolate sparse 3D HOI keyframes into densely temporally coherent 4D HOI sequences. To enhance the quality of generated 4D HOI sequences, we propose a novel Contact-Aware Encoder within ContactDM to extract human-object contact patterns and a novel Contact-Aware HOI Attention to effectively integrate the contact signals into diffusion models. Experimental results show that we achieve state-of-the-art results on the publicly available OMOMO and 3D-FUTURE datasets, demonstrating strong generalization abilities to unseen objects, while enabling high-fidelity 4D HOI generation.
           </p>
         </div>
       </div>
@@ -165,30 +174,30 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/overview.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          In Stage 1, the method recovers keyframe HOI using object geometry and human pose priors. In Stage 2, the Contact-Aware Diffusion Model (ContactDM) synthesizes the 4D HOI sequence leveraging the keyframe HOI and the encoded contact embeddings. After training, the model can generalize to unseen objects given the object geometry and the associated text prompt.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/Figure3_1.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Examples of synthetic motions for qualitative evaluation.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
+        <img src="static/images/Figure3_2.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
+          Examples of synthetic motions for qualitative evaluation.
+        </h2>
+      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
+      <img src="static/images/objectanchor.png" alt="MY ALT TEXT"/>
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
+        Results of our Object-AnchorNet on objects from OMOMO and 3D-FUTURE.
       </h2>
     </div>
   </div>
@@ -200,85 +209,174 @@
 
 
 
-<!-- Youtube video -->
+
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <h2 class="title is-3">Video Presentation on Unseen Objects</h2>
+
+      <!-- First row of videos -->
+      <div class="columns is-centered" style="margin-bottom: 2rem;">
+        <div class="column is-one-third" style="padding: 1rem;">
+          <div class="publication-video" style="height: 300px;">
+            <iframe src="static/videos/video1.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 100%; border-radius: 8px;"></iframe>
           </div>
+          <h3 class="subtitle has-text-centered" style="margin-top: 1rem;">Facing the back of the whitechair, lift the whitechair, move the whitechair, and then place the whitechair on the floor.</h3>
+        </div>
+
+        <div class="column is-one-third" style="padding: 1rem;">
+          <div class="publication-video" style="height: 300px;">
+            <iframe src="static/videos/video2.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 100%; border-radius: 8px;"></iframe>
+          </div>
+          <h3 class="subtitle has-text-centered" style="margin-top: 1rem;">Lift the whitechair, move the whitechair, and put down the whitechair.</h3>
+        </div>
+
+        <div class="column is-one-third" style="padding: 1rem;">
+          <div class="publication-video" style="height: 300px;">
+            <iframe src="static/videos/video3-35.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 100%; border-radius: 8px;"></iframe>
+          </div>
+          <h3 class="subtitle has-text-centered" style="margin-top: 1rem;">Kick the whitechair, and set it back down.</h3>
         </div>
       </div>
+
+      <!-- Second row of videos -->
+      <div class="columns is-centered" style="margin-bottom: 2rem;">
+        <div class="column is-one-third" style="padding: 1rem;">
+          <div class="publication-video" style="height: 300px;">
+            <iframe src="static/videos/video4-008.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 100%; border-radius: 8px;"></iframe>
+          </div>
+          <h3 class="subtitle has-text-centered" style="margin-top: 1rem;">Lift the smalltable, move the smalltable and put down the smalltable.</h3>
+        </div>
+
+        <div class="column is-one-third" style="padding: 1rem;">
+          <div class="publication-video" style="height: 300px;">
+            <iframe src="static/videos/video5-014.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 100%; border-radius: 8px;"></iframe>
+          </div>
+          <h3 class="subtitle has-text-centered" style="margin-top: 1rem;">Lift the smalltable above your head, walk, and put the smalltable down.</h3>
+        </div>
+
+        <div class="column is-one-third" style="padding: 1rem;">
+          <div class="publication-video" style="height: 300px;">
+            <iframe src="static/videos/video6-027.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 100%; border-radius: 8px;"></iframe>
+          </div>
+          <h3 class="subtitle has-text-centered" style="margin-top: 1rem;">Push the smalltable.</h3>
+        </div>
+      </div>
+
+      <!-- Third row of videos -->
+      <div class="columns is-centered" style="margin-bottom: 2rem;">
+        <div class="column is-one-third" style="padding: 1rem;">
+          <div class="publication-video" style="height: 300px;">
+            <iframe src="static/videos/video7-012.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 100%; border-radius: 8px;"></iframe>
+          </div>
+          <h3 class="subtitle has-text-centered" style="margin-top: 1rem;">Lift the suitcase, rotate the suitcase, and set it back down.</h3>
+        </div>
+
+        <div class="column is-one-third" style="padding: 1rem;">
+          <div class="publication-video" style="height: 300px;">
+            <iframe src="static/videos/video8-006.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 100%; border-radius: 8px;"></iframe>
+          </div>
+          <h3 class="subtitle has-text-centered" style="margin-top: 1rem;">Pull the tripod, and set it back down.</h3>
+        </div>
+
+        <div class="column is-one-third" style="padding: 1rem;">
+          <div class="publication-video" style="height: 300px;">
+            <iframe src="static/videos/video9-029.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 100%; border-radius: 8px;"></iframe>
+          </div>
+          <h3 class="subtitle has-text-centered" style="margin-top: 1rem;">Hold and turn the tripod around to a different orientation.</h3>
+        </div>
+      </div>
+
+</section>
+
+
+<!-- Video Presentation on Unseen Objects -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">Video Presentation on Unseen Objects from 3D-FUTURE</h2>
+
+      <!-- First row of videos -->
+      <div class="columns is-centered" style="margin-bottom: 2rem;">
+        <div class="column is-one-third" style="padding: 1rem;">
+          <div class="publication-video" style="height: 300px;">
+            <iframe src="static/videos/video10.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 100%; border-radius: 8px;"></iframe>
+          </div>
+          <h3 class="subtitle has-text-centered" style="margin-top: 1rem;">Push the largebox, and set it back down.</h3>
+        </div>
+
+        <div class="column is-one-third" style="padding: 1rem;">
+          <div class="publication-video" style="height: 300px;">
+            <iframe src="static/videos/video11.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 100%; border-radius: 8px;"></iframe>
+          </div>
+          <h3 class="subtitle has-text-centered" style="margin-top: 1rem;">Pull the largetable, and set it back down.</h3>
+        </div>
+
+        <div class="column is-one-third" style="padding: 1rem;">
+          <div class="publication-video" style="height: 300px;">
+            <iframe src="static/videos/video13.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 100%; border-radius: 8px;"></iframe>
+          </div>
+          <h3 class="subtitle has-text-centered" style="margin-top: 1rem;">Pull the largetable, and set it back down.</h3>
+        </div>
+      </div>
+
+
     </div>
   </div>
 </section>
-<!-- End youtube video -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
+<!-- Video Presentation on Unseen Objects -->
+<section class="compare">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
+      <h2 class="title is-3">Comparing to Other methods on unseen objects</h2>
+
+      <!-- First row of videos -->
+      <div class="columns is-centered" style="margin-bottom: 2rem;">
+        <div class="column is-one-third" style="padding: 1rem;">
+          <div class="publication-video" style="height: 300px;">
+            <iframe src="static/videos/OMOMO.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 100%; border-radius: 8px;"></iframe>
+          </div>
+          <h3 class="subtitle has-text-centered" style="margin-top: 1rem;"><strong>OMOMO</strong></h3>
         </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
+
+        <div class="column is-one-third" style="padding: 1rem;">
+          <div class="publication-video" style="height: 300px;">
+            <iframe src="static/videos/CHOIS.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 100%; border-radius: 8px;"></iframe>
+          </div>
+          <h3 class="subtitle has-text-centered" style="margin-top: 1rem;"><strong>CHOIS</strong></h3>
         </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+
+        <div class="column is-one-third" style="padding: 1rem;">
+          <div class="publication-video" style="height: 300px;">
+            <iframe src="static/videos/hoidiff.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width: 100%; height: 100%; border-radius: 8px;"></iframe>
+          </div>
+          <h3 class="subtitle has-text-centered" style="margin-top: 1rem;"><strong>HOI-Diff</strong></h3>
         </div>
       </div>
+
+
     </div>
   </div>
 </section>
-<!-- End video carousel -->
 
 
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
 
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@misc{li2025genhoigeneralizingtextdriven4d,
+        title={GenHOI: Generalizing Text-driven 4D Human-Object Interaction Synthesis for Unseen Objects}, 
+        author={Shujia Li and Haiyu Zhang and Xinyuan Chen and Yaohui Wang and Yutong Ban},
+        year={2025},
+        eprint={2506.15483},
+        archivePrefix={arXiv},
+        primaryClass={cs.CV},
+        url={https://arxiv.org/abs/2506.15483}, 
+  }e</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
